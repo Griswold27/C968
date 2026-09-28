@@ -2,7 +2,7 @@ using System;
 
 namespace InventoryManagementSystem
 {
-    class Part
+    public class Part
     {
         public int PartID { get; set; }
         public string Name { get; set; }

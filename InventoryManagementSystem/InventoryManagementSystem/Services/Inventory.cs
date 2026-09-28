@@ -6,12 +6,12 @@ using System.Net.Http.Headers;
 
 namespace InventoryManagementSystem
 {
-    class Inventory
+    public class Inventory
     {
         public BindingList<Product> Products { get; set; }
         public BindingList<Part> AllParts { get; set; }
 
-        public void addProduct(Product product)
+        public void AddProduct(Product product)
         {
 
         }
@@ -28,17 +28,17 @@ namespace InventoryManagementSystem
             return Products[id];
         }
 
-        public void updateProduct(int num, Product product)
+        public void UpdateProduct(int num, Product product)
         {
 
         }
 
-        public void addPart(Part part)
+        public void AddPart(Part part)
         {
 
         }
 
-        public bool deletePart(Part part)
+        public bool DeletePart(Part part)
         {
             // default return
             return false;

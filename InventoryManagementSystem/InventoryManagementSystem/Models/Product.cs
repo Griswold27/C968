@@ -3,7 +3,7 @@ using System.ComponentModel;
 
 namespace InventoryManagementSystem
 {
-    class Product
+    public class Product
     {
         public BindingList<Part> AssociatedParts { get; set; }
         public int ProductID { get; set; }
