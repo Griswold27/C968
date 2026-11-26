@@ -12,9 +12,24 @@ namespace InventoryManagementSystem
 {
     public partial class ProductForm : Form
     {
+        private ProductFormMode mode;
         public ProductForm()
         {
             InitializeComponent();
+        }
+
+        public ProductForm(ProductFormMode mode)
+        {
+            InitializeComponent();
+            this.mode = mode;
+            if (mode == ProductFormMode.ModifyProduct)
+            {
+                this.Text = "Modify Product";
+            }
+            else
+            {
+                this.Text = "Add Product";
+            }
         }
 
         private void txtID_TextChanged(object sender, EventArgs e)
@@ -22,4 +37,5 @@ namespace InventoryManagementSystem
 
         }
     }
+    public enum ProductFormMode { AddProduct, ModifyProduct }
 }

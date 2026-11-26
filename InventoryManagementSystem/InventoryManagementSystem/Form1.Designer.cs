@@ -30,7 +30,7 @@
         {
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblParts = new System.Windows.Forms.Label();
-            this.btnSearch1 = new System.Windows.Forms.Button();
+            this.btnSearchPart = new System.Windows.Forms.Button();
             this.btnPartsAdd = new System.Windows.Forms.Button();
             this.btnProductsAdd = new System.Windows.Forms.Button();
             this.btnPartsModify = new System.Windows.Forms.Button();
@@ -52,7 +52,7 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSearch2 = new System.Windows.Forms.Button();
+            this.btnSearchProduct = new System.Windows.Forms.Button();
             this.lblProducts = new System.Windows.Forms.Label();
             this.txtPartsSearch = new System.Windows.Forms.TextBox();
             this.txtProductsSearch = new System.Windows.Forms.TextBox();
@@ -82,16 +82,16 @@
             this.lblParts.TabIndex = 1;
             this.lblParts.Text = "Parts";
             // 
-            // btnSearch1
+            // btnSearchPart
             // 
-            this.btnSearch1.Location = new System.Drawing.Point(369, 72);
-            this.btnSearch1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnSearch1.Name = "btnSearch1";
-            this.btnSearch1.Size = new System.Drawing.Size(112, 35);
-            this.btnSearch1.TabIndex = 2;
-            this.btnSearch1.Text = "Search";
-            this.btnSearch1.UseVisualStyleBackColor = true;
-            this.btnSearch1.Click += new System.EventHandler(this.btnSearch1_Click);
+            this.btnSearchPart.Location = new System.Drawing.Point(369, 72);
+            this.btnSearchPart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnSearchPart.Name = "btnSearchPart";
+            this.btnSearchPart.Size = new System.Drawing.Size(112, 35);
+            this.btnSearchPart.TabIndex = 2;
+            this.btnSearchPart.Text = "Search";
+            this.btnSearchPart.UseVisualStyleBackColor = true;
+            this.btnSearchPart.Click += new System.EventHandler(this.btnSearchPart_Click);
             // 
             // btnPartsAdd
             // 
@@ -102,6 +102,7 @@
             this.btnPartsAdd.TabIndex = 3;
             this.btnPartsAdd.Text = "Add";
             this.btnPartsAdd.UseVisualStyleBackColor = true;
+            this.btnPartsAdd.Click += new System.EventHandler(this.btnPartsAdd_Click);
             // 
             // btnProductsAdd
             // 
@@ -112,6 +113,7 @@
             this.btnProductsAdd.TabIndex = 4;
             this.btnProductsAdd.Text = "Add";
             this.btnProductsAdd.UseVisualStyleBackColor = true;
+            this.btnProductsAdd.Click += new System.EventHandler(this.btnProductsAdd_Click);
             // 
             // btnPartsModify
             // 
@@ -122,6 +124,7 @@
             this.btnPartsModify.TabIndex = 5;
             this.btnPartsModify.Text = "Modify";
             this.btnPartsModify.UseVisualStyleBackColor = true;
+            this.btnPartsModify.Click += new System.EventHandler(this.btnPartsModify_Click);
             // 
             // btnProductsModify
             // 
@@ -132,6 +135,7 @@
             this.btnProductsModify.TabIndex = 6;
             this.btnProductsModify.Text = "Modify";
             this.btnProductsModify.UseVisualStyleBackColor = true;
+            this.btnProductsModify.Click += new System.EventHandler(this.btnProductsModify_Click);
             // 
             // btnPartsDelete
             // 
@@ -142,6 +146,7 @@
             this.btnPartsDelete.TabIndex = 7;
             this.btnPartsDelete.Text = "Delete";
             this.btnPartsDelete.UseVisualStyleBackColor = true;
+            this.btnPartsDelete.Click += new System.EventHandler(this.btnPartsDelete_Click);
             // 
             // btnProductsDelete
             // 
@@ -152,6 +157,7 @@
             this.btnProductsDelete.TabIndex = 8;
             this.btnProductsDelete.Text = "Delete";
             this.btnProductsDelete.UseVisualStyleBackColor = true;
+            this.btnProductsDelete.Click += new System.EventHandler(this.btnProductsDelete_Click);
             // 
             // btnExit
             // 
@@ -162,7 +168,7 @@
             this.btnExit.TabIndex = 9;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.button8_Click);
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // dataGridParts
             // 
@@ -183,7 +189,7 @@
             this.dataGridParts.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridParts.Size = new System.Drawing.Size(740, 420);
             this.dataGridParts.TabIndex = 10;
-            this.dataGridParts.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridParts.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridPartsCell_Click);
             // 
             // Column1
             // 
@@ -277,16 +283,16 @@
             this.dataGridViewTextBoxColumn6.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
-            // btnSearch2
+            // btnSearchProduct
             // 
-            this.btnSearch2.Location = new System.Drawing.Point(1134, 72);
-            this.btnSearch2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnSearch2.Name = "btnSearch2";
-            this.btnSearch2.Size = new System.Drawing.Size(112, 35);
-            this.btnSearch2.TabIndex = 12;
-            this.btnSearch2.Text = "Search";
-            this.btnSearch2.UseVisualStyleBackColor = true;
-            this.btnSearch2.Click += new System.EventHandler(this.button9_Click);
+            this.btnSearchProduct.Location = new System.Drawing.Point(1134, 72);
+            this.btnSearchProduct.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnSearchProduct.Name = "btnSearchProduct";
+            this.btnSearchProduct.Size = new System.Drawing.Size(112, 35);
+            this.btnSearchProduct.TabIndex = 12;
+            this.btnSearchProduct.Text = "Search";
+            this.btnSearchProduct.UseVisualStyleBackColor = true;
+            this.btnSearchProduct.Click += new System.EventHandler(this.btnSearchProduct_Click);
             // 
             // lblProducts
             // 
@@ -324,7 +330,7 @@
             this.Controls.Add(this.txtProductsSearch);
             this.Controls.Add(this.txtPartsSearch);
             this.Controls.Add(this.lblProducts);
-            this.Controls.Add(this.btnSearch2);
+            this.Controls.Add(this.btnSearchProduct);
             this.Controls.Add(this.dataGridProducts);
             this.Controls.Add(this.dataGridParts);
             this.Controls.Add(this.btnExit);
@@ -334,7 +340,7 @@
             this.Controls.Add(this.btnPartsModify);
             this.Controls.Add(this.btnProductsAdd);
             this.Controls.Add(this.btnPartsAdd);
-            this.Controls.Add(this.btnSearch1);
+            this.Controls.Add(this.btnSearchPart);
             this.Controls.Add(this.lblParts);
             this.Controls.Add(this.lblTitle);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -352,7 +358,7 @@
 
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblParts;
-        private System.Windows.Forms.Button btnSearch1;
+        private System.Windows.Forms.Button btnSearchPart;
         private System.Windows.Forms.Button btnPartsAdd;
         private System.Windows.Forms.Button btnProductsAdd;
         private System.Windows.Forms.Button btnPartsModify;
@@ -374,7 +380,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.Button btnSearch2;
+        private System.Windows.Forms.Button btnSearchProduct;
         private System.Windows.Forms.Label lblProducts;
         private System.Windows.Forms.TextBox txtPartsSearch;
         private System.Windows.Forms.TextBox txtProductsSearch;
