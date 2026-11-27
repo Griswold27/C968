@@ -51,7 +51,7 @@ namespace InventoryManagementSystem
 
         public void AddPart(Part part)
         {
-
+            Parts.Add(part);
         }
 
         public bool DeletePart(Part part)
@@ -80,7 +80,15 @@ namespace InventoryManagementSystem
 
         public void UpdatePart(int num, Part part)
         {
+            int index = -1;
 
+            for (int i = 0; i < Parts.Count; i++)
+            {
+                if (Parts[i].PartID == num)
+                {
+                    Parts[i] = part;
+                }
+            }
         }
     }
 }

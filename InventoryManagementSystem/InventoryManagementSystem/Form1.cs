@@ -22,6 +22,12 @@ namespace InventoryManagementSystem
            dataGridParts.DataSource = inventory.Parts;
         }
 
+        private void RefreshPartsGrid()
+        {
+            dataGridParts.DataSource = null;
+            dataGridParts.DataSource = inventory.Parts;
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -40,15 +46,18 @@ namespace InventoryManagementSystem
         private void btnPartsAdd_Click(object sender, EventArgs e)
         {
 
-            using (PartForm partForm = new PartForm(PartFormMode.AddPart))
+            using (PartForm partForm = new PartForm(this.inventory, PartFormMode.AddPart))
             {
-                partForm.ShowDialog(this);
+                if (partForm.ShowDialog(this) == DialogResult.OK)
+                {
+                    RefreshPartsGrid();
+                }
             }
         }
 
         private void btnPartsModify_Click(object sender, EventArgs e)
         {
-            using (PartForm partForm = new PartForm(PartFormMode.ModifyPart))
+            using (PartForm partForm = new PartForm(this.inventory, PartFormMode.ModifyPart))
             {
                 partForm.ShowDialog(this);
             }

@@ -2,7 +2,7 @@ using System;
 
 namespace InventoryManagementSystem
 {
-    public class Part
+    public abstract class Part
     {
         public int PartID { get; set; }
         public string Name { get; set; }
@@ -10,7 +10,18 @@ namespace InventoryManagementSystem
         public int InStock { get; set; }
         public int Min {  get; set; }
         public int Max { get; set; }
+        //public int MachineID { get; set; }
+        //public string CompanyName { get; set; }
+        //public bool IsOutsourced { get; set; }
     }
 
-    
+    //public class Inhouse : Part
+    //{
+    //    public int MachineID { get; set; }
+    //}
+
+    //public class Outsourced : Part
+    //{
+    //    public string CompanyName { get; set; }
+    //}
 }
